@@ -1,0 +1,363 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{723940AA-B909-410B-975E-22FC8E97B92C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>MCA_AMS.My.MyApplication</StartupObject>
+    <RootNamespace>MCA_AMS</RootNamespace>
+    <AssemblyName>MCA-AMS</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>MCA-AMS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>MCA-AMS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Downloads\LibrarySystem2-20231024T072934Z-001\LibrarySystem2\LibrarySystem2\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Downloads\LibrarySystem2-20231024T072934Z-001\LibrarySystem2\LibrarySystem2\bin\Debug\CrystalDecisions.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="MessagingToolkit.Barcode">
+      <HintPath>..\..\..\..\Downloads\LibrarySystem2-20231024T072934Z-001\LibrarySystem2\LibrarySystem2\bin\Debug\MessagingToolkit.Barcode.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.1.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector NET 8.1.0\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data Sets\DS_AttendancePrinting.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_AttendancePrinting.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data Sets\DS_AttendancePrinting.vb">
+      <DependentUpon>DS_AttendancePrinting.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AttendanceReport.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AttendanceReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_AttendanceGeneral.Designer.vb">
+      <DependentUpon>Form_AttendanceGeneral.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form_AttendanceGeneral.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_AttendanceOption.Designer.vb">
+      <DependentUpon>Form_AttendanceOption.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form_AttendanceOption.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_AttendanceSubject.Designer.vb">
+      <DependentUpon>Form_AttendanceSubject.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form_AttendanceSubject.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_Index.Designer.vb">
+      <DependentUpon>Form_Index.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form_Index.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_PrintSubjectAttendance.Designer.vb">
+      <DependentUpon>Form_PrintSubjectAttendance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form_PrintSubjectAttendance.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_ViewingAttendance.Designer.vb">
+      <DependentUpon>Form_ViewingAttendance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form_ViewingAttendance.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_Maintenance.Designer.vb">
+      <DependentUpon>Form_Maintenance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form_Maintenance.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SampleClass1.vb" />
+    <Compile Include="Forms\SubjAttendance.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SubjAttendance.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\AttendanceModule.vb" />
+    <Compile Include="Modules\ConnectionsModule.vb" />
+    <Compile Include="Printing\CR_BarcodePrinting.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR_BarcodePrinting.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\customrenderer.vb" />
+    <Compile Include="Data Sets\DS_BarcodePrinting.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_BarcodePrinting.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form_AdminRegistration.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_AdminRegistration.Designer.vb">
+      <DependentUpon>Form_AdminRegistration.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_PrintGeneralAttendance.Designer.vb">
+      <DependentUpon>Form_PrintGeneralAttendance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form_PrintGeneralAttendance.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_BarcodePrinting.Designer.vb">
+      <DependentUpon>Form_BarcodePrinting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form_BarcodePrinting.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_Login.Designer.vb">
+      <DependentUpon>Form_Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form_Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_MainForm.Designer.vb">
+      <DependentUpon>Form_MainForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form_MainForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_StudentMaintenance.Designer.vb">
+      <DependentUpon>Form_StudentMaintenance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form_StudentMaintenance.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_StudentRegistration.Designer.vb">
+      <DependentUpon>Form_StudentRegistration.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form_StudentRegistration.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_UserManagement.Designer.vb">
+      <DependentUpon>Form_UserManagement.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form_UserManagement.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Printing\CR_DailyAttendance.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR_DailyAttendance.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Printing\ValidationModule.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\AttendanceReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AttendanceReport.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form_AttendanceGeneral.resx">
+      <DependentUpon>Form_AttendanceGeneral.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form_AttendanceOption.resx">
+      <DependentUpon>Form_AttendanceOption.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form_AttendanceSubject.resx">
+      <DependentUpon>Form_AttendanceSubject.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form_Index.resx">
+      <DependentUpon>Form_Index.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form_Maintenance.resx">
+      <DependentUpon>Form_Maintenance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form_PrintSubjectAttendance.resx">
+      <DependentUpon>Form_PrintSubjectAttendance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form_ViewingAttendance.resx">
+      <DependentUpon>Form_ViewingAttendance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SubjAttendance.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SubjAttendance.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printing\CR_BarcodePrinting.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_BarcodePrinting.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form_AdminRegistration.resx">
+      <DependentUpon>Form_AdminRegistration.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form_PrintGeneralAttendance.resx">
+      <DependentUpon>Form_PrintGeneralAttendance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form_BarcodePrinting.resx">
+      <DependentUpon>Form_BarcodePrinting.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form_Login.resx">
+      <DependentUpon>Form_Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form_MainForm.resx">
+      <DependentUpon>Form_MainForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form_StudentMaintenance.resx">
+      <DependentUpon>Form_StudentMaintenance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form_StudentRegistration.resx">
+      <DependentUpon>Form_StudentRegistration.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form_UserManagement.resx">
+      <DependentUpon>Form_UserManagement.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printing\CR_DailyAttendance.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_DailyAttendance.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data Sets\DS_AttendancePrinting.xsc">
+      <DependentUpon>DS_AttendancePrinting.xsd</DependentUpon>
+    </None>
+    <None Include="Data Sets\DS_AttendancePrinting.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_AttendancePrinting.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Data Sets\DS_AttendancePrinting.xss">
+      <DependentUpon>DS_AttendancePrinting.xsd</DependentUpon>
+    </None>
+    <None Include="Data Sets\DS_BarcodePrinting.xsc">
+      <DependentUpon>DS_BarcodePrinting.xsd</DependentUpon>
+    </None>
+    <None Include="Data Sets\DS_BarcodePrinting.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_BarcodePrinting.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Data Sets\DS_BarcodePrinting.xss">
+      <DependentUpon>DS_BarcodePrinting.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Attendance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Controls1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
